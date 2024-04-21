@@ -1,0 +1,202 @@
+User Routes:
+Register User: POST http://localhost:3000/UserRt/register
+Login User: POST http://localhost:3000/UserRt/login
+Get User Details: GET http://localhost:3000/UserRt/:userId
+Update User Details: PATCH http://localhost:3000/UserRt/:userId
+
+Admin Routes:
+Create Admin: POST http://localhost:3000/AdminRt/InputDt
+Update Admin Email: PATCH http://localhost:3000/AdminRt/:adminId
+Get All Admins: GET http://localhost:3000/AdminRt
+Get Admin by ID: GET http://localhost:3000/AdminRt/:adminId
+Delete Admin: DELETE http://localhost:3000/AdminRt/:adminId
+
+Faculty Routes:
+Create Faculty: POST http://localhost:3000/FacultyRt
+Update Faculty: PUT http://localhost:3000/FacultyRt/:id
+Get All Faculties: GET http://localhost:3000/FacultyRt
+Faculty Member Routes:
+Create Faculty Member: POST http://localhost:3000/FacultyMemberRt/InputDt
+Get Faculty Member by UserID: GET http://localhost:3000/FacultyMemberRt/:userId
+Update Faculty Member Faculty: PATCH http://localhost:3000/FacultyMemberRt/:userId
+
+Course Routes:
+Get All Courses: GET http://localhost:3000/CourseRt
+Create Course: POST http://localhost:3000/CourseRt/courses
+Update Course: PUT http://localhost:3000/CourseRt/:id
+Delete Course: DELETE http://localhost:3000/CourseRt/:id
+
+Enrolment Routes:
+Get All Enrollments: GET http://localhost:3000/EnrolmentRt
+Create Enrolment: POST http://localhost:3000/EnrolmentRt
+Update Enrolment: PUT http://localhost:3000/EnrolmentRt/:id
+Delete Enrolment: DELETE http://localhost:3000/EnrolmentRt/:id
+
+Booking Routes:
+Get All Bookings: GET http://localhost:3000/BookingRt
+Create Booking: POST http://localhost:3000/BookingRt
+Update Booking: PUT http://localhost:3000/BookingRt/:id
+Delete Booking: DELETE http://localhost:3000/BookingRt/:id
+
+Room and Resource Routes:
+Get All Rooms and Resources: GET http://localhost:3000/RoomResourceRt
+Create Room or Resource: POST http://localhost:3000/RoomResourceRt
+Update Room or Resource: PUT http://localhost:3000/RoomResourceRt/:id
+Delete Room or Resource: DELETE http://localhost:3000/RoomResourceRt/:id
+
+Student Routes:
+Get Student by UserID: GET http://localhost:3000/StudentRt/:userId
+Update Student Faculty: PATCH http://localhost:3000/StudentRt/:userId
+
+Timetable Routes:
+Get All Timetables: GET http://localhost:3000/TimetableRt
+Create Timetable: POST http://localhost:3000/TimetableRt
+Update Timetable: PUT http://localhost:3000/TimetableRt/:id
+Delete Timetable: DELETE http://localhost:3000/TimetableRt/:id
+
+
+{
+    "name": "John Doe",
+    "contact": "+1234567890",
+    "email": "john@example.com",
+    "username": "johndoe",
+    "password": "password123",
+    "userType": "student"
+}
+
+
+{
+    "username": "johndoe",
+    "password": "password123"
+}
+
+
+{
+    "name": "John Smith",
+    "contact": "+0987654321",
+    "email": "john.smith@example.com"
+}
+
+
+{
+    "userId": "user123",
+    "additionalEmail": "admin@example.com"
+}
+{
+    "additionalEmail": "admin_updated@example.com"
+}
+
+
+{
+    "FId": "F001",
+    "fName": "Engineering",
+    "NoOfStdnts": 1000
+}
+
+
+{
+    "fName": "Computer Science",
+    "NoOfStdnts": 1200
+}
+
+{
+    "userId": "user456",
+    "faculty": "Engineering"
+}
+{
+    "faculty": "Computer Science"
+}
+
+
+{
+    "Code": "CSCI101",
+    "Cname": "Introduction to Computer Science",
+    "Description": "An introductory course to computer science concepts.",
+    "credits": 3,
+    "faculty": "Engineering"
+}
+
+
+{
+    "Code": "CSCI102",
+    "Cname": "Data Structures and Algorithms",
+    "Description": "A course covering data structures and algorithms.",
+    "credits": 4,
+    "faculty": "Computer Science"
+}
+
+
+{
+    "SId": "student123",
+    "CId": "course456"
+}
+
+
+{
+    "SId": "student456",
+    "CId": "course789"
+}
+
+
+{
+    "BookedBy": "user123",
+    "RoomResourceID": "room456",
+    "Date": "2024-04-21",
+    "startTime": "10:00 AM",
+    "endTime": "12:00 PM",
+    "purpose": "Meeting",
+    "note": "Discuss project progress"
+}
+
+
+{
+    "Date": "2024-04-22",
+    "startTime": "11:00 AM",
+    "endTime": "1:00 PM",
+    "purpose": "Team brainstorming",
+    "note": "Plan upcoming tasks"
+}
+
+
+{
+    "RID": "room123",
+    "Type": "Room",
+    "name": "Conference Room",
+    "Description": "A spacious conference room",
+    "Location": "Building A",
+    "Capacity": 20,
+    "Status": "Available"
+}
+
+
+{
+    "Type": "Resource",
+    "name": "Projector",
+    "Description": "High-definition projector",
+    "Location": "Building B",
+    "Capacity": 1,
+    "Status": "Unavailable"
+}
+
+
+{
+    "faculty": "Computer Science"
+}
+
+
+{
+    "course": "CSCI101",
+    "dayOfWeek": "Monday",
+    "startTime": "9:00 AM",
+    "endTime": "11:00 AM",
+    "location": "Room 101"
+}
+
+
+{
+    "course": "CSCI102",
+    "dayOfWeek": "Tuesday",
+    "startTime": "10:00 AM",
+    "endTime": "12:00 PM",
+    "location": "Room 102"
+}
